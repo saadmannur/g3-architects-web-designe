@@ -11,6 +11,7 @@
 .display-flex{
     display: flex;
 }
+/* text-color */
 .text-dark02{
     color: #424242;
 }
@@ -20,19 +21,22 @@
 .btn-primary{
     background-color: #FF900E;
     color: white;
-    font-weight: 600px;
+    font-weight: 600;
     font-size: 1.25rem;
     padding: 20px 25px;
     border-radius: 10px;
     border: none;
+    cursor: pointer;
 }
-
+.btn-primary:hover{
+    background-color: rgb(12, 154, 12);
+}
 /* header styles */
 .bg-color{
     background-color:rgba(255, 144, 14, 0.1);
 }
 .brand{
-    font-weight: 700px;
+    font-weight: 700;
     font-size: 2.8rem;
 }
 .navbar{
@@ -49,12 +53,13 @@
     text-decoration: none;
 }
 .navbar, .banner{
-    max-width: 1440px;
-    margin: 0px auto;
+    width: 100%;
+    padding: 60px 20px;
+    box-sizing: border-box;
 }
 /* banner related styles */
 .banner-content{
-    max-width: 850px;
+    max-width: 700px;
     margin: 0px auto;
     text-align: center;
 }
@@ -63,7 +68,7 @@
     margin-bottom: 50px;
 }
 .banner-title{
-    font-weight: 700px;
+    font-weight: 700;
     font-size: 4rem;
     color: #131313;
 
@@ -71,13 +76,90 @@
 .banner-img{
     width: 100%;
 }
+
+/* main styles */
+.teams{
+    /* border: 3px solid red; */
+    width: 100%;
+    padding: 60px 20px;
+    box-sizing: border-box;
+}
+.goat{
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    gap: 40px;
+}
+.teams-img-container{
+    /* border: 1px solid green; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    /* margin-top: 50px; */
+    /* margin-left: 45px; */
+}
+.our-feature{
+    /* align-items: center; */
+    margin-left: 76px;
+    /* max-width: 530px; */
+    /* border: 1px solid red; */
+}
+.feature-title{
+    font-weight: 700;
+    font-size: 2.8rem;
+}
+#list{
+    font-weight: 500;
+}
+.fe{
+    color: #FF900E;
+}
+.feature-text{
+    font-size: 1rem;
+    margin-bottom: 32px;
+    margin-top: 24px;
+}
+
 /* responsive media qur */
 @media screen and (max-width:576px) {
-    .navbar, .list-items{
+    .navbar, 
+    .list-items{
         flex-direction: column;
+        align-items: center;
+     }
+     .goat{
+        flex-direction: column;
+        text-align: center;
+     }
+    .our-feature{
+        margin-left: 0;
     }
+    .navbar,
+    .banner {
+        margin: 5px auto;}
+    .teams-img-container{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .list-items {
+        padding: 0;
+        gap: 10px;
+    }
+    .banner-title{
+        font-size: 2.5rem;
+    }
+}
+@media screen and (min-width:576px) and (max-width:992px) {
+    .goat{
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+.teams-img-container{
+    grid-template-columns: repeat(2, 1fr);
+}
+.our-feature{
+    margin-left: 20px;
+}
     
 }
-/* main styles */
 
-/* footer styles */
