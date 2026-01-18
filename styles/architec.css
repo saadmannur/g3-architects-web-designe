@@ -119,6 +119,68 @@
     margin-bottom: 32px;
     margin-top: 24px;
 }
+/* Fact design */
+.fact-section{
+    /* border: 1px solid red; */
+    margin: 10px auto;
+}
+.fact-container{
+    /* border: 1px solid green; */
+    margin: 0px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+.kakala{
+    margin-left: 20px;
+}
+.fact-description{
+    max-width: 540px;
+    margin-left: 20px;
+}
+.fact{
+    margin: 0px auto;
+    border: 1px solid #FF900E;
+    border-radius: 8px;
+    max-width: 240px;
+    width: 100%;
+    height: 240px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.fact-number{
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.fact-text{
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 10px;
+}
+/* sponsor related style */
+.sponsor-info{
+    max-width: 540px;
+    margin: 50px auto;
+    text-align: center;
+}
+.sponsor-title{
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+.sponsor-companies{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+    /* margin: 0px auto; */
+}
+.sponsor-companies img{
+    filter: grayscale(100%);
+     margin: 0px auto; 
+    /* border: 1px solid green; */
+}
 
 /* responsive media qur */
 @media screen and (max-width:576px) {
@@ -137,8 +199,8 @@
     .navbar,
     .banner {
         margin: 5px auto;}
-    .teams-img-container{
-        grid-template-columns: repeat(1,1fr);
+    .teams-img-container {
+        grid-template-columns: 1fr;
     }
     .list-items {
         padding: 0;
@@ -147,6 +209,16 @@
     .banner-title{
         font-size: 2.5rem;
     }
+    .fact-container {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    .sponsor-companies{
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+        gap: 30px;
+    }
+        
 }
 @media screen and (min-width:576px) and (max-width:992px) {
     .goat{
@@ -159,6 +231,15 @@
 }
 .our-feature{
     margin-left: 20px;
+}
+.fact-container{
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+}
+.sponsor-companies{
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: 30px;
 }
     
 }
